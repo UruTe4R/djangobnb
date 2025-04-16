@@ -1,13 +1,18 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import { inter } from "@/app/ui/fonts";
+// components
+import Categories from '@/app/components/Categories';
+import PropertyList from "@/app/components/properties/PropertyList";
 
 export default function Home() {
   return (
     <main className={`${inter.className}`}>
-      Django bnb
-
-      <h2 className={styles.airbnb}>Django and next rules</h2>
+      <div className={styles.categoriesContainer}>
+        <Categories />
+      </div>
+      <div className={styles.propertylistContainer}>
+        <PropertyList />
+      </div>
     </main>
   );
 }
