@@ -20,7 +20,6 @@ export default function RootLayout({
         <Navbar />
 
         <div className={styles.div}>
-
           {children}
         </div>
       </body>

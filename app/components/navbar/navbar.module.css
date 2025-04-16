@@ -33,6 +33,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 200px;
+}
+.responsiveImage {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* g child 2 search filter */
@@ -98,7 +105,7 @@
   padding: 0.5rem;
 }
 .p_4 {
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: var(--airbnb);
   border-radius: 50px;
   color: white;
@@ -111,12 +118,20 @@
 
 .desktop {
   display: none;
-  transform: scaleX(1);
+  
+}
+@media (max-width: 975px) {
+  .searchfilter {
+    height: 48px;
+  }
 }
 
 @media (min-width: 975px) {
   .desktop {
     display: block;
+  }
+  .p_4 {
+    padding: 1rem;
   }
 }
 
@@ -132,7 +147,8 @@
   display: flex;
   padding: 0.5rem;
   align-items: center;
-  justify-content: center
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .usermenu {
@@ -158,4 +174,19 @@
 .icon {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+/* add property button */
+.addpropertybutton {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  
+}
+.addpropertybutton:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }

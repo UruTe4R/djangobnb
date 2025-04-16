@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import SearchFilters from '@/app/components/navbar/SearchFilters';
 import UserNav from './UserNav';
+import AddPropertyButton from '@/app/components/navbar/AddPropertyButton';
 
 export default function Navbar() {
   return (
@@ -13,15 +14,16 @@ export default function Navbar() {
           <Link href="/">
             <Image src="/logo.png"
             width={180}
-            height={55}
-            alt="DjangoBnb logo"/>
+            height={38}
+            alt="DjangoBnb logo"
+            className={styles.responsiveImage}/>
           </Link>
         </div>
           <div className={styles.searchfilter_container}>
             <SearchFilters />
           </div>
           <div className={styles.usermenu_container}>
-            Add Property
+            <AddPropertyButton />
             <UserNav />
           </div>
       </div>
