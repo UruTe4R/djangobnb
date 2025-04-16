@@ -1,0 +1,161 @@
+/* parent */
+.navbar {
+  background-color: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 1rem 0;
+  border-bottom: 1px;
+
+  z-index: 10;
+
+}
+/* child */
+.nav_container {
+  background-color: white;
+  max-width: 1500px;
+  height: 6rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* g child 1 */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* g child 2 search filter */
+.searchfilter_container {
+  display: flex;
+  padding: 0 0.2rem;
+}
+.searchfilter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  border: 1px solid gray;
+  border-radius: 50px;
+}
+/* g g child 1 location */
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.where {
+  width: 250px;
+  height: 64px;
+  padding: 0 2rem;
+
+  display: flex;
+  border-radius: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.where_small {
+  width: 150px;
+  height: 64px;
+  padding: 0 2rem;
+
+  display: flex;
+  border-radius: 50px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.where:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.where_small:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.small_text {
+  font-size: 14px;
+  color: gray;
+}
+.middle_text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.p_2 {
+  padding: 0.5rem;
+}
+.p_4 {
+  padding: 1rem;
+  background-color: var(--airbnb);
+  border-radius: 50px;
+  color: white;
+}
+.p_4:hover {
+  background-color: var(--airbnbDark);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.desktop {
+  display: none;
+  transform: scaleX(1);
+}
+
+@media (min-width: 975px) {
+  .desktop {
+    display: block;
+  }
+}
+
+/* g g child 2 input */
+.input {
+  flex: 1;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+/* g child 3 */
+.usermenu_container {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center
+}
+
+.usermenu {
+  padding: 0.5rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid lightgray;
+}
+.usermenu:hover {
+  cursor: pointer;
+}
+.usermenu:active {
+  background-color: lightgray;
+}
+
+.usermenu_button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
