@@ -7,7 +7,7 @@ export default function PropertyListItem() {
       <div className={styles.item}>
         <Image 
           fill
-          src="/beach_1.jpg"
+          src="/images/beach_1.jpg"
           alt="image of beach house"
           className={styles.image}/>
       </div>

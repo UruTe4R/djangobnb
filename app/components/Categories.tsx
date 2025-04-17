@@ -6,7 +6,7 @@ export default function Categories() {
     <div className={styles.categories_container}>
       <div className={styles.category}>
         <Image 
-        src="/icn_category_beach.jpeg"
+        src="/images/icn_category_beach.jpeg"
         alt="Category - Beach"
         height={20}
         width={20}/>
@@ -16,7 +16,7 @@ export default function Categories() {
 
       <div className={styles.category}>
         <Image 
-        src="/icn_category_beach.jpeg"
+        src="/images/icn_category_beach.jpeg"
         alt="Category - Beach"
         height={20}
         width={20}/>
@@ -25,7 +25,7 @@ export default function Categories() {
       </div>
       <div className={styles.category}>
         <Image 
-        src="/icn_category_beach.jpeg"
+        src="/images/icn_category_beach.jpeg"
         alt="Category - Beach"
         height={20}
         width={20}/>
@@ -35,7 +35,7 @@ export default function Categories() {
 
       <div className={styles.category}>
         <Image 
-        src="/icn_category_beach.jpeg"
+        src="/images/icn_category_beach.jpeg"
         alt="Category - Beach"
         height={20}
         width={20}/>

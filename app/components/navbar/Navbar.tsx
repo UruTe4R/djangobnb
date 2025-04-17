@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className={styles.nav_container}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image src="/logo.png"
+            <Image src="/images/logo.png"
             width={180}
             height={38}
             alt="DjangoBnb logo"
