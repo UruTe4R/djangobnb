@@ -1,13 +1,47 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from '@/app/components/navbar/navbar.module.css';
 
+import MenuLink from '@/app/components/navbar/MenuLink';
+import useLoginModal from '@/app/hooks/useLoginModal';
+import useSignupModal from '@/app/hooks/useSignupModal';
+
 export default function UserNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  const open = useLoginModal((state) => state.open);
+  const openSignup = useSignupModal((state) => state.open);
+  const userMenuRef = useRef<HTMLDivElement>(null);
+  const [isOpenUserMenu, setIsOpenUserMenu] = useState(false);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target as Node)) {
+        setIsOpenUserMenu(false);
+      }
+    }
+
+    document.addEventListener('mouseup', handleClickOutside);
+    return () => {
+      document.removeEventListener('mouseup', handleClickOutside);
+    }
+  }, [])
+
+  function handleClickLogin() {
+    open()
+    setIsOpenUserMenu(false);
+  }
+  function handleClickSigup() {
+    openSignup()
+    setIsOpenUserMenu(false);
+  }
   return (
-    <div className={styles.usermenu}>
-      <button className={styles.usermenu_button}>
+    <div ref={userMenuRef} className={styles.usermenu}>
+      <button 
+        className={styles.usermenu_button}
+        onClick={() => {
+          setIsOpenUserMenu(!isOpenUserMenu);
+        }}
+      >
         <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={styles.icon}>
          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -18,9 +52,21 @@ export default function UserNav() {
         </svg>
       </button>
 
-      {isOpen && (
-        <div className={styles.popup}>
-          asdfe
+      {isOpenUserMenu && (
+        <div 
+          className={styles.popup}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <MenuLink 
+            label="Log in"
+            onClick={handleClickLogin}
+          />
+          <MenuLink 
+            label="Sign up"
+            onClick={handleClickSigup}
+          />
         </div>
       )}
     </div>

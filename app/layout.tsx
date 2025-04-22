@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "./ui/fonts";
-import Navbar from "./components/navbar/Navbar"; 
 import styles from './layout.module.css';
+
+import Navbar from "./components/navbar/Navbar"; 
+import LoginModal from '@/app/components/modals/LoginModal';
+import SignupModal from '@/app/components/modals/SignupModal';
 
 export const metadata: Metadata = {
   title: "Django bnb",
@@ -14,6 +17,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const content =  (
+      <p>Yo</p>
+)
+  
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
@@ -21,6 +29,8 @@ export default function RootLayout({
         <div className={styles.div}>
           {children}
         </div>
+        <LoginModal />
+        <SignupModal />
       </body>
     </html>
   );

@@ -5,8 +5,9 @@ export default function PropertyListItem() {
   return (
     <div className={styles.propertyList}>
       <div className={styles.item}>
-        <Image 
+        <Image
           fill
+          sizes={'(max-width: 975px) 33vw, (max-width: 1500px) 20vw, 20vw'}
           src="/images/beach_1.jpg"
           alt="image of beach house"
           className={styles.image}/>

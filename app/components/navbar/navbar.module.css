@@ -151,25 +151,27 @@
 }
 
 .usermenu {
-  padding: 0.5rem;
   position: relative;
   display: inline-block;
   border-radius: 50px;
   border: 1px solid lightgray;
-}
-.usermenu:hover {
   cursor: pointer;
 }
-.usermenu:active {
-  background-color: lightgray;
-}
+
+
 
 .usermenu_button {
+  padding: 0.5rem;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   background-color: transparent;
   border: none;
 }
+.usermenu_button:active {
+  background-color: lightgray;
+}
+
 .icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -195,4 +197,23 @@
 .popup {
   width: 220px;
   position: absolute;
+  top: 60px;
+  right: 0px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px lightgray;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* MenuLink */
+.menuLink {
+  padding: 1rem 1.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.menuLink:hover {
+  background-color: rgb(241, 241, 241);
 }
